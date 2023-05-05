@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VR car drive simulation</title>
+        <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script>
+
+        </script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script src="./drive.js"></script>
+
+    </head>
+    <body>
+        <a-scene id="scene" background="color:lightblue" inspector-plugin-recast>
+            <a-assets>
+            <a-asset-item id="city" src="./assets/low_poly_city/scene.gltf"></a-asset-item>
+            <a-asset-item id="wheel" src="./assets/steering_wheel/scene.gltf"></a-asset-item>
+            <a-asset-item id="collider" src="./assets/navmesh.gltf"></a-asset-item>
+    
+            </a-assets>
+
+            <a-entity id="citySet" gltf-model="#city" position="10 -2.63754 -150" rotation="0 90 0" scale="1 1 1"></a-entity>
+
+            <a-box id="b1" material="height:400; metalness:0.34" color="red" geometry="depth:400; height:50; width:5" position="-76.79446 -8.30764 -164.16795"> </a-box>
+            <a-box id="b2" material="height:400; metalness:0.34" color="red" geometry="depth:400; height:50; width:5" position="75.38341 -8.30764 -164.16795"> </a-box>
+            <a-box id="b3" material="height:400; metalness:0.34" color="red" geometry="depth:5; height:50; width:200" position="-0.33183 -7.8421 -359.48732"> </a-box>
+            <a-box id="b4" material="height:400; metalness:0.34" color="red" geometry="depth:5; height:50; width:200" position="-0.33183 -7.8421 31.16964"> </a-box>
+
+            <a-plane id="ground" geometry="height:400; width:200; depth:10" repeat="5 5" position="0 -10 -163.73258" rotation="-90 0 0" color="yellow" visible="false"></a-plane>
+    
+
+        </a-scene>
+
+    </body>
+</html>
